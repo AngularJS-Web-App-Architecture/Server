@@ -12,7 +12,7 @@
     using Server.DataTransferModels.Sample;
     using Sample.Data.Contracts;
     using AutoMapper.QueryableExtensions;
-
+    using Common.Constants;
     public class SampleService : ISampleService
     {
         private readonly IRepository<SampleModel> samples;
@@ -62,11 +62,9 @@
 
         public async Task<List<SampleDataTransferModel>> GetPage(int page)
         {
-            var itemsPerPage = 10;
-
             var result = await this.samples.All()
-                .Skip((page - 1) * itemsPerPage)
-                .Take(itemsPerPage)
+                .Skip((page - 1) * ServicesConstants.ItemsPerPage)
+                .Take(ServicesConstants.ItemsPerPage)
                 .ProjectTo<SampleDataTransferModel>()
                 .ToListAsync();
 

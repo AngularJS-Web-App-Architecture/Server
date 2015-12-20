@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{57AC25BB-F086-4FFC-BC0F-B194D2C182C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{89A32729-111A-41BD-8503-D81D8ECB5290}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DFCED5F3-2686-4A0B-83CA-ABF1F1A9612F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{972CECF4-4D5E-4CE1-8E5C-C27B4555508A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Server.API", "Server\Sample.Server.API\Sample.Server.API.csproj", "{FFB135B0-5F87-4CB9-B93A-E7B7AF0BD29D}"
 EndProject
@@ -32,8 +30,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7293052D-7ECE-42A0-B2BE-5AD65755B176}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Common.Constants", "Common\Sample.Common.Constants\Sample.Common.Constants.csproj", "{EA5DB80F-BF9D-4565-8535-05E50C17FA11}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Server.API.Tests", "Tests\Sample.Server.API.Tests\Sample.Server.API.Tests.csproj", "{BA88A449-EB83-4598-B47B-03B83DFDB793}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,10 +77,6 @@ Global
 		{EA5DB80F-BF9D-4565-8535-05E50C17FA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA5DB80F-BF9D-4565-8535-05E50C17FA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA5DB80F-BF9D-4565-8535-05E50C17FA11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA88A449-EB83-4598-B47B-03B83DFDB793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA88A449-EB83-4598-B47B-03B83DFDB793}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA88A449-EB83-4598-B47B-03B83DFDB793}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA88A449-EB83-4598-B47B-03B83DFDB793}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +92,5 @@ Global
 		{62A695C6-2F8A-4347-8009-ABB0D679B912} = {DFCED5F3-2686-4A0B-83CA-ABF1F1A9612F}
 		{690B2741-FBBD-454F-A398-4720FA1422FD} = {DFCED5F3-2686-4A0B-83CA-ABF1F1A9612F}
 		{EA5DB80F-BF9D-4565-8535-05E50C17FA11} = {7293052D-7ECE-42A0-B2BE-5AD65755B176}
-		{BA88A449-EB83-4598-B47B-03B83DFDB793} = {972CECF4-4D5E-4CE1-8E5C-C27B4555508A}
 	EndGlobalSection
 EndGlobal

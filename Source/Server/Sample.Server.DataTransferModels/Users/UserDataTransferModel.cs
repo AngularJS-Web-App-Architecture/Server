@@ -4,6 +4,9 @@
     using Common.Mappings.Contracts;
     using Data.Common.Constants;
     using Data.Models.Models;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+
 
     public class UserDataTransferModel : IMapFrom<User>
     {
