@@ -13,6 +13,7 @@
     using AutoMapper.QueryableExtensions;
     using Contracts;
     using Common.Constants;
+    using Sample.Server.Common;
 
     public class EventsService : IEventsService
     {
