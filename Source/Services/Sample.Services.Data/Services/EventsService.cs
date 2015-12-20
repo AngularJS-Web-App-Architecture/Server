@@ -13,6 +13,7 @@
     using AutoMapper.QueryableExtensions;
     using Contracts;
     using Common.Constants;
+
     public class EventsService : IEventsService
     {
         private readonly IRepository<Event> events;

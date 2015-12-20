@@ -10,6 +10,7 @@
     using Sample.Data.Models.Models;
     using Sample.Data.Contracts;
     using Server.DataTransferModels.Users;
+    using Microsoft.AspNet.Identity;
 
     public class UsersService : IUsersService
     {
