@@ -30,6 +30,7 @@
         public const string EventStartDateExceptionMessage = "Event StartDate cannot be set to a date earlier than today.";
         public const string EventEndDateExceptionMessage = "Event EndDate cannot be set to date earlier than Event StartDate.";
 
+        public const int EventInsertionFailed = -1;
         // User
         public const int UserDisplayNameMaxLength = 50;
         public const int UserDisplayNameMinLength = 3;

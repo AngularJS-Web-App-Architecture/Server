@@ -1,15 +1,17 @@
 ﻿namespace Sample.Server.DataTransferModels.Events
 {
     using Common.Mappings.Contracts;
+    using Countries;
     using Data.Common.Constants;
     using Data.Models.Models;
     using System;
     using System.ComponentModel.DataAnnotations;
+    using AutoMapper;
 
-    public class EventDataTransferModel : IMapFrom<Event>
+    public class EventDataTransferModel : IMapFrom<Event> , IHaveCustomMappings
     {
         [Required]
-        public virtual Country Country { get; set; }
+        public string Country { get; set; }
 
         [Required]
         [MaxLength(ValidationConstants.DescriptionMaxLength, ErrorMessage = ValidationConstants.DescriptionMaxLengthErrorMessage)]
@@ -22,37 +24,15 @@
         public string Host { get; set; }
 
         [Required]
-        public DateTime StartDate
-        {
-            get { return this.StartDate; }
-            set
-            {
-                if (DateTime.Compare(value, DateTime.UtcNow) >= 0)
-                {
-                    this.StartDate = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(ValidationConstants.EventStartDateExceptionMessage);
-                }
-            }
-        }
+        public DateTime StartDate { get; set; }
 
         [Required]
-        public DateTime EndDate
+        public DateTime EndDate { get; set; }
+
+        public void CreateMappings(IConfiguration configuration)
         {
-            get { return this.EndDate; }
-            set
-            {
-                if (DateTime.Compare(value, this.StartDate) > 0)
-                {
-                    this.EndDate = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(ValidationConstants.EventEndDateExceptionMessage);
-                }
-            }
+            configuration.CreateMap<Event, EventDataTransferModel>()
+                .ForMember(c => c.Country, opt => opt.MapFrom(c => c.Country.Name));
         }
     }
 }

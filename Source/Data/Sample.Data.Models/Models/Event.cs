@@ -34,37 +34,9 @@
         public string Host { get; set; }
 
         [Required]
-        public DateTime StartDate
-        {
-            get { return this.StartDate; }
-            set
-            {
-                if (DateTime.Compare(value, DateTime.UtcNow) >= 0)
-                {
-                    this.StartDate = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(ValidationConstants.EventStartDateExceptionMessage);
-                }
-            }
-        }
+        public DateTime StartDate { get; set; }
 
         [Required]
-        public DateTime EndDate
-        {
-            get { return this.EndDate; }
-            set
-            {
-                if (DateTime.Compare(value, this.StartDate) > 0)
-                {
-                    this.EndDate = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(ValidationConstants.EventEndDateExceptionMessage);
-                }
-            }
-        }
+        public DateTime EndDate { get; set; }
     }
 }

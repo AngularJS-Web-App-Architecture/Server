@@ -22,12 +22,14 @@
         public int Id { get; set; }
 
         [Required]
+        [Index(IsUnique = true)]
         [MinLength(ValidationConstants.CountryNameMinLength, ErrorMessage = ValidationConstants.CountryNameMinLengthErrorMessage)]
         [MaxLength(ValidationConstants.CountryNameMaxLength, ErrorMessage = ValidationConstants.CountryNameMaxLengthErrorMessage)]
         [JsonProperty]
         public string Name { get; set; }
 
         [Required]
+        [Index(IsUnique = true)]
         [MinLength(ValidationConstants.CountryCodeLength, ErrorMessage = ValidationConstants.CountryCodeLengthErrorMessage)]
         [MaxLength(ValidationConstants.CountryCodeLength, ErrorMessage = ValidationConstants.CountryCodeLengthErrorMessage)]
         [JsonProperty]

@@ -3,10 +3,8 @@
     using Common.Contracts;
     using Sample.Data.Models.Models;
     using Server.DataTransferModels.Events;
-    using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
 
     public interface IEventsService : IService
@@ -17,7 +15,7 @@
 
         Task<EventDataTransferModel> GetById(int id);
 
-        Task<List<EventDataTransferModel>> GetPage(int page);
+        Task<List<EventDataTransferModel>> GetByPage(int page);
 
         Task<int> Add(EventDataTransferModel model);
 
